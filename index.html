@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Split Motorsport — Oficina premium especializada em Volkswagen air-cooled. Fusca, Brasília, Kombi, Variant, TL, SP2 e derivados.">
+  <meta name="theme-color" content="#0a0a0a">
+  <title>Split Motorsport | Especialistas em Air-Cooled</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/logo-split.png" type="image/png">
+</head>
+<body>
+
+  <!-- Header fixo -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="logo" aria-label="Split Motorsport — Início">
+        <img
+          src="images/logo-split.png"
+          alt="Split Motorsport — Oficina especializada em motores VW aircooled"
+          class="logo__img"
+          width="160"
+          height="160"
+        >
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Menu principal">
+        <ul class="nav__list">
+          <li><a href="#inicio" class="nav__link">Início</a></li>
+          <li><a href="#especialidades" class="nav__link">Especialidades</a></li>
+          <li><a href="#servicos" class="nav__link">Serviços</a></li>
+          <li><a href="#projetos" class="nav__link">Projetos</a></li>
+          <li><a href="#sobre" class="nav__link">Sobre</a></li>
+          <li><a href="#depoimentos" class="nav__link">Depoimentos</a></li>
+          <li><a href="#contato" class="nav__link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <a href="#contato" class="btn btn--primary btn--sm header__cta">Agendar avaliação</a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero" id="inicio">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__grid"></div>
+        <div class="hero__glow"></div>
+      </div>
+      <div class="container hero__inner">
+        <div class="hero__content reveal">
+          <span class="hero__badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 2L15 8H22L16.5 12L18 19L12 15L6 19L7.5 12L2 8H9L12 2Z" fill="currentColor"/>
+            </svg>
+            Oficina premium air-cooled
+          </span>
+          <h1 class="hero__title">
+            Especialistas em <span class="text-accent">Air-Cooled</span> com padrão premium
+          </h1>
+          <p class="hero__subtitle">
+            Manutenção, restauração e preparação de Fuscas, Brasílias, Kombis e derivados Volkswagen com motor a ar.
+          </p>
+          <div class="hero__actions">
+            <a href="#contato" class="btn btn--primary">Agendar avaliação</a>
+            <a href="#servicos" class="btn btn--outline">Conhecer serviços</a>
+          </div>
+          <div class="hero__stats">
+            <div class="hero__stat">
+              <strong>20+</strong>
+              <span>Anos de experiência</span>
+            </div>
+            <div class="hero__stat">
+              <strong>100+</strong>
+              <span>Projetos entregues</span>
+            </div>
+            <div class="hero__stat">
+              <strong>100%</strong>
+              <span>Foco air-cooled</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero__visual reveal reveal--delay">
+          <div class="hero__video-frame">
+            <video
+              class="hero__video"
+              src="videos/fusca-65-intro.mp4"
+              title="Fusca 65 — 1700cc com kit 88mm AA Performance, comando 276°"
+              autoplay
+              muted
+              loop
+              playsinline
+              controls
+              preload="metadata"
+            ></video>
+            <div class="hero__video-accent"></div>
+          </div>
+          <p class="hero__video-caption">
+            Fusca 65… mas só na lata. Debaixo do capô: 1700cc com kit 88mm AA Performance, comando 276°.
+          </p>
+        </div>
+      </div>
+      <a href="#especialidades" class="hero__scroll" aria-label="Rolar para especialidades">
+        <span>Explorar</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </section>
+
+    <!-- Especialidades -->
+    <section class="section" id="especialidades">
+      <div class="container">
+        <header class="section__header reveal">
+          <span class="section__label">Nossa expertise</span>
+          <h2 class="section__title">Especialidades</h2>
+          <p class="section__desc">Domínio técnico nos clássicos Volkswagen com motor a ar — cada modelo com a atenção que merece.</p>
+        </header>
+        <div class="cards-grid cards-grid--4">
+          <article class="card card--specialty reveal">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none"><path d="M8 28c2-8 8-14 16-14s14 6 16 14" stroke="currentColor" stroke-width="2"/><circle cx="14" cy="30" r="4" stroke="currentColor" stroke-width="2"/><circle cx="34" cy="30" r="4" stroke="currentColor" stroke-width="2"/><path d="M18 14h12l2 6H16l2-6z" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+            <h3 class="card__title">Fusca</h3>
+            <p class="card__text">Revisão, restauração e preparação com respeito à essência do ícone brasileiro.</p>
+          </article>
+          <article class="card card--specialty reveal">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none"><rect x="10" y="18" width="28" height="14" rx="2" stroke="currentColor" stroke-width="2"/><path d="M14 18V14h20v4" stroke="currentColor" stroke-width="2"/><circle cx="16" cy="34" r="3" stroke="currentColor" stroke-width="2"/><circle cx="32" cy="34" r="3" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+            <h3 class="card__title">Brasília</h3>
+            <p class="card__text">Manutenção especializada no sedã a ar com acabamento e confiabilidade premium.</p>
+          </article>
+          <article class="card card--specialty reveal">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="16" width="36" height="18" rx="3" stroke="currentColor" stroke-width="2"/><path d="M6 24h36M18 16V12h12v4" stroke="currentColor" stroke-width="2"/><circle cx="14" cy="36" r="3" stroke="currentColor" stroke-width="2"/><circle cx="34" cy="36" r="3" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+            <h3 class="card__title">Kombi</h3>
+            <p class="card__text">Do uso diário ao projeto especial — motor, freios e estrutura com padrão Split.</p>
+          </article>
+          <article class="card card--specialty reveal">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none"><path d="M10 26c3-6 9-10 14-10s11 4 14 10" stroke="currentColor" stroke-width="2"/><path d="M8 28h32l-2 8H10l-2-8z" stroke="currentColor" stroke-width="2"/><circle cx="16" cy="36" r="3" stroke="currentColor" stroke-width="2"/><circle cx="32" cy="36" r="3" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+            <h3 class="card__title">Variant</h3>
+            <p class="card__text">Perua clássica com diagnóstico preciso e soluções que preservam valor e originalidade.</p>
+          </article>
+          <article class="card card--specialty reveal">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none"><path d="M12 28h24l-3-10H15l-3 10z" stroke="currentColor" stroke-width="2"/><circle cx="16" cy="32" r="3" stroke="currentColor" stroke-width="2"/><circle cx="32" cy="32" r="3" stroke="currentColor" stroke-width="2"/><path d="M20 18h8" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+            <h3 class="card__title">TL</h3>
+            <p class="card__text">Fastback raro com expertise em mecânica, elétrica e detalhes de acabamento.</p>
+          </article>
+          <article class="card card--specialty reveal">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none"><path d="M14 26c2-5 6-8 10-8s8 3 10 8" stroke="currentColor" stroke-width="2"/><path d="M10 28h28l-2 6H12l-2-6z" stroke="currentColor" stroke-width="2"/><path d="M22 18l4-6 4 6" stroke="currentColor" stroke-width="2"/><circle cx="16" cy="34" r="3" stroke="currentColor" stroke-width="2"/><circle cx="32" cy="34" r="3" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+            <h3 class="card__title">SP2</h3>
+            <p class="card__text">Cuidado exclusivo para o esportivo nacional — performance e preservação em equilíbrio.</p>
+          </article>
+          <article class="card card--specialty card--highlight reveal">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="10" stroke="currentColor" stroke-width="2"/><path d="M24 14v10l6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M14 24h-4M38 24h-4M24 10V6M24 42v-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <h3 class="card__title">Motores VW a ar</h3>
+            <p class="card__text">Regulagem, rebuild e preparação de motores boxer — do stock ao projeto performance.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Serviços -->
+    <section class="section section--dark" id="servicos">
+      <div class="container">
+        <header class="section__header reveal">
+          <span class="section__label">O que fazemos</span>
+          <h2 class="section__title">Serviços</h2>
+          <p class="section__desc">Soluções completas para manter, restaurar ou elevar o desempenho do seu clássico.</p>
+        </header>
+        <div class="cards-grid cards-grid--4">
+          <article class="card card--service reveal">
+            <span class="card__number">01</span>
+            <h3 class="card__title">Revisão completa</h3>
+            <p class="card__text">Check-up geral com checklist detalhado — motor, freios, suspensão, elétrica e fluidos.</p>
+          </article>
+          <article class="card card--service reveal">
+            <span class="card__number">02</span>
+            <h3 class="card__title">Diagnóstico técnico</h3>
+            <p class="card__text">Identificação precisa de falhas com laudo transparente e plano de ação claro.</p>
+          </article>
+          <article class="card card--service reveal">
+            <span class="card__number">03</span>
+            <h3 class="card__title">Regulagem de motor</h3>
+            <p class="card__text">Válvulas, carburador, ignição e sincronismo para motor silencioso e eficiente.</p>
+          </article>
+          <article class="card card--service reveal">
+            <span class="card__number">04</span>
+            <h3 class="card__title">Freios e suspensão</h3>
+            <p class="card__text">Segurança e dirigibilidade — pastilhas, tambores, amortecedores e geometria.</p>
+          </article>
+          <article class="card card--service reveal">
+            <span class="card__number">05</span>
+            <h3 class="card__title">Elétrica automotiva</h3>
+            <p class="card__text">Chicote, alternador, ignição e acessórios com fiação confiável e organizada.</p>
+          </article>
+          <article class="card card--service reveal">
+            <span class="card__number">06</span>
+            <h3 class="card__title">Restauração mecânica</h3>
+            <p class="card__text">Recuperação completa de sistemas mecânicos com peças selecionadas e acabamento impecável.</p>
+          </article>
+          <article class="card card--service reveal">
+            <span class="card__number">07</span>
+            <h3 class="card__title">Preparação de motor</h3>
+            <p class="card__text">Projetos de performance leve a moderada — confiabilidade sempre em primeiro lugar.</p>
+          </article>
+          <article class="card card--service reveal">
+            <span class="card__number">08</span>
+            <h3 class="card__title">Consultoria para compra</h3>
+            <p class="card__text">Avaliação pré-compra de clássicos — evite surpresas e invista com segurança.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Por que escolher -->
+    <section class="section" id="diferenciais">
+      <div class="container">
+        <div class="split-section">
+          <div class="split-section__content reveal">
+            <span class="section__label">Diferenciais</span>
+            <h2 class="section__title">Por que escolher nossa oficina?</h2>
+            <p class="section__desc">Unimos paixão por clássicos, conhecimento técnico profundo e um padrão de atendimento que respeita cada projeto.</p>
+            <ul class="features-list">
+              <li class="features-list__item">
+                <span class="features-list__icon" aria-hidden="true">✦</span>
+                <div>
+                  <strong>Especialização real em air-cooled</strong>
+                  <p>Foco exclusivo em Volkswagen a ar — não somos oficina generalista.</p>
+                </div>
+              </li>
+              <li class="features-list__item">
+                <span class="features-list__icon" aria-hidden="true">✦</span>
+                <div>
+                  <strong>Atendimento consultivo</strong>
+                  <p>Orientamos cada decisão com clareza, do diagnóstico à entrega.</p>
+                </div>
+              </li>
+              <li class="features-list__item">
+                <span class="features-list__icon" aria-hidden="true">✦</span>
+                <div>
+                  <strong>Transparência no diagnóstico</strong>
+                  <p>Laudos honestos, sem surpresas — você sabe exatamente o que será feito.</p>
+                </div>
+              </li>
+              <li class="features-list__item">
+                <span class="features-list__icon" aria-hidden="true">✦</span>
+                <div>
+                  <strong>Peças selecionadas</strong>
+                  <p>Componentes de qualidade compatíveis com a longevidade do seu clássico.</p>
+                </div>
+              </li>
+              <li class="features-list__item">
+                <span class="features-list__icon" aria-hidden="true">✦</span>
+                <div>
+                  <strong>Padrão premium de acabamento</strong>
+                  <p>Detalhes impecáveis — do motor à apresentação final do veículo.</p>
+                </div>
+              </li>
+              <li class="features-list__item">
+                <span class="features-list__icon" aria-hidden="true">✦</span>
+                <div>
+                  <strong>Respeito à originalidade</strong>
+                  <p>Preservamos a essência de cada projeto, seja stock ou preparado.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="split-section__visual reveal reveal--delay">
+            <div class="visual-panel">
+              <div class="visual-panel__gauge" aria-hidden="true">
+                <svg viewBox="0 0 200 120" fill="none">
+                  <path d="M20 100 A80 80 0 0 1 180 100" stroke="#FFD100" stroke-width="4" stroke-linecap="round"/>
+                  <path d="M20 100 A80 80 0 0 1 120 35" stroke="#FFD100" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
+                  <circle cx="100" cy="100" r="6" fill="#FFD100"/>
+                  <line x1="100" y1="100" x2="115" y2="50" stroke="#FFD100" stroke-width="3" stroke-linecap="round"/>
+                  <text x="100" y="115" text-anchor="middle" fill="#888" font-size="10">RPM</text>
+                </svg>
+              </div>
+              <blockquote class="visual-panel__quote">
+                "Cada parafuso conta. Cada projeto, uma história."
+                <cite>— Diego, Split Motorsport</cite>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projetos -->
+    <section class="section section--dark" id="projetos">
+      <div class="container">
+        <header class="section__header reveal">
+          <span class="section__label">Portfólio</span>
+          <h2 class="section__title">Projetos</h2>
+          <p class="section__desc">Alguns dos trabalhos que refletem nossa paixão e padrão técnico — acompanhe mais no Instagram e YouTube.</p>
+        </header>
+        <div class="projects-grid" id="projectsGrid">
+          <article class="project-card reveal">
+            <a href="https://www.instagram.com/reel/DVMoHOKkRue/" class="project-card__link" target="_blank" rel="noopener noreferrer">
+              <div class="project-card__image">
+                <img src="images/projetos/projeto-1.jpg" alt="Fusca 65 com preparação 1700cc AA Performance — Split Motorsport" loading="lazy" width="400" height="300">
+                <span class="project-card__tag">Antes e depois</span>
+              </div>
+              <div class="project-card__body">
+                <h3 class="project-card__title">Fusca 65 — Preparação 1700cc</h3>
+                <p class="project-card__text">Kit 88mm AA Performance, comando 276°, cabeçotes trabalhados e escape 4x1 — projeto real publicado no Instagram.</p>
+              </div>
+            </a>
+          </article>
+          <article class="project-card reveal">
+            <a href="https://www.instagram.com/reel/DQ7iLk6EaS3/" class="project-card__link" target="_blank" rel="noopener noreferrer">
+              <div class="project-card__image">
+                <img src="images/projetos/projeto-2.jpg" alt="Fusca 1978 — referência de cuidado e precisão Split Motorsport" loading="lazy" width="400" height="300">
+                <span class="project-card__tag">Restauração mecânica</span>
+              </div>
+              <div class="project-card__body">
+                <h3 class="project-card__title">Fusca 1978 — Padrão Split</h3>
+                <p class="project-card__text">O mesmo cuidado, precisão e respeito aplicados em cada motor preparado na oficina.</p>
+              </div>
+            </a>
+          </article>
+          <article class="project-card reveal">
+            <a href="https://www.instagram.com/reel/C3Y64obRWeA/" class="project-card__link" target="_blank" rel="noopener noreferrer">
+              <div class="project-card__image">
+                <img src="images/projetos/projeto-3.jpg" alt="Manutenção preventiva em motor VW air-cooled" loading="lazy" width="400" height="300">
+                <span class="project-card__tag">Preparação leve</span>
+              </div>
+              <div class="project-card__body">
+                <h3 class="project-card__title">Manutenção preventiva</h3>
+                <p class="project-card__text">A melhor manutenção é sempre a preventiva — foco em confiabilidade para motores VW a ar.</p>
+              </div>
+            </a>
+          </article>
+          <article class="project-card reveal">
+            <a href="https://www.instagram.com/p/DZ2t0VURWWG/" class="project-card__link" target="_blank" rel="noopener noreferrer">
+              <div class="project-card__image">
+                <img src="images/projetos/projeto-4.jpg" alt="Fusca clássico — projeto Split Motorsport" loading="lazy" width="400" height="300">
+                <span class="project-card__tag">Revisão diária</span>
+              </div>
+              <div class="project-card__body">
+                <h3 class="project-card__title">Fusca — Paixão que atravessa gerações</h3>
+                <p class="project-card__text">Celebração do clássico brasileiro e da história viva que cada Fusca representa.</p>
+              </div>
+            </a>
+          </article>
+          <article class="project-card reveal">
+            <a href="https://www.instagram.com/p/DZgK5Ykka9d/" class="project-card__link" target="_blank" rel="noopener noreferrer">
+              <div class="project-card__image">
+                <img src="images/projetos/projeto-5.jpg" alt="Cuidado mecânico e revisão — Split Motorsport" loading="lazy" width="400" height="300">
+                <span class="project-card__tag">Preservação original</span>
+              </div>
+              <div class="project-card__body">
+                <h3 class="project-card__title">Cuidado mecânico premium</h3>
+                <p class="project-card__text">Troca de óleo, revisão e atenção aos detalhes para manter seu clássico confiável na estrada.</p>
+              </div>
+            </a>
+          </article>
+        </div>
+        <div class="social-cta reveal">
+          <p>Acompanhe projetos em tempo real</p>
+          <div class="social-cta__links">
+            <a href="https://www.instagram.com/split_motorsport/" target="_blank" rel="noopener noreferrer" class="btn btn--outline">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              @split_motorsport
+            </a>
+            <a href="https://youtube.com/@diegofusca78" target="_blank" rel="noopener noreferrer" class="btn btn--outline">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              @diegofusca78
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre -->
+    <section class="section" id="sobre">
+      <div class="container">
+        <div class="about-section reveal">
+          <div class="about-section__badge">
+            <img
+              src="images/logo-split.png"
+              alt=""
+              class="logo__img logo__img--about"
+              width="160"
+              height="160"
+              aria-hidden="true"
+            >
+          </div>
+          <span class="section__label">Quem somos</span>
+          <h2 class="section__title">Sobre a oficina</h2>
+          <p class="about-section__text">
+            Somos uma oficina especializada em veículos Volkswagen air-cooled, unindo conhecimento técnico, paixão por clássicos e atendimento premium para preservar a história e a performance de cada projeto.
+          </p>
+          <p class="about-section__text">
+            Liderada por <strong>Diego</strong>, a Split Motorsport nasceu da vivência real com Fuscas e derivados — da estrada aos detalhes de bancada. Cada veículo que entra aqui recebe diagnóstico honesto, mãos experientes e o cuidado que um clássico merece.
+          </p>
+          <div class="about-section__highlights">
+            <div class="about-highlight">
+              <strong>Air-cooled only</strong>
+              <span>100% foco VW a ar</span>
+            </div>
+            <div class="about-highlight">
+              <strong>Atendimento premium</strong>
+              <span>Consultivo e transparente</span>
+            </div>
+            <div class="about-highlight">
+              <strong>Comunidade ativa</strong>
+              <span>Instagram &amp; YouTube</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Depoimentos (Instagram Highlight) -->
+    <section class="section section--dark" id="depoimentos">
+      <div class="container">
+        <header class="section__header reveal">
+          <span class="section__label">Clientes</span>
+          <h2 class="section__title">Depoimentos</h2>
+          <p class="section__desc">
+            Avaliações reais de clientes — carregadas do destaque
+            <strong>Depoimentos ⚙️</strong> de
+            <a href="https://www.instagram.com/split_motorsport/" target="_blank" rel="noopener noreferrer">@split_motorsport</a>.
+          </p>
+        </header>
+
+        <div class="depoimentos-instagram reveal">
+          <div class="depoimentos-instagram__toolbar">
+            <a
+              href="https://www.instagram.com/stories/highlights/17962501514442570/"
+              class="depoimentos-highlight"
+              target="_blank"
+              rel="noopener noreferrer"
+              id="depoimentosHighlightLink"
+            >
+              <span class="depoimentos-highlight__ring" aria-hidden="true">
+                <img src="images/logo-split.png" alt="" class="depoimentos-highlight__avatar" width="72" height="72">
+              </span>
+              <span class="depoimentos-highlight__info">
+                <strong>Depoimentos ⚙️</strong>
+                <span>Destaque permanente no Instagram</span>
+              </span>
+            </a>
+            <a
+              href="https://www.instagram.com/stories/highlights/17962501514442570/"
+              class="btn btn--outline btn--sm"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Abrir no Instagram
+            </a>
+          </div>
+
+          <p class="depoimentos-instagram__status" id="depoimentosStatus" role="status">
+            Carregando depoimentos do Instagram…
+          </p>
+
+          <div class="depoimentos-instagram__grid" id="depoimentosGrid" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section class="section" id="contato">
+      <div class="container">
+        <header class="section__header reveal">
+          <span class="section__label">Fale conosco</span>
+          <h2 class="section__title">Contato</h2>
+          <p class="section__desc">Agende uma avaliação ou tire suas dúvidas — estamos prontos para cuidar do seu clássico.</p>
+        </header>
+        <div class="contact-grid">
+          <form class="contact-form reveal" id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="nome">Nome completo</label>
+              <input type="text" id="nome" name="nome" required autocomplete="name" placeholder="Seu nome">
+              <span class="form-error" id="error-nome"></span>
+            </div>
+            <div class="form-group">
+              <label for="telefone">Telefone / WhatsApp</label>
+              <input type="tel" id="telefone" name="telefone" required autocomplete="tel" placeholder="(11) 99999-9999">
+              <span class="form-error" id="error-telefone"></span>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="modelo">Modelo do veículo</label>
+                <select id="modelo" name="modelo" required>
+                  <option value="">Selecione</option>
+                  <option value="Fusca">Fusca</option>
+                  <option value="Brasília">Brasília</option>
+                  <option value="Kombi">Kombi</option>
+                  <option value="Variant">Variant</option>
+                  <option value="TL">TL</option>
+                  <option value="SP2">SP2</option>
+                  <option value="Outro air-cooled">Outro air-cooled</option>
+                </select>
+                <span class="form-error" id="error-modelo"></span>
+              </div>
+              <div class="form-group">
+                <label for="servico">Tipo de serviço</label>
+                <select id="servico" name="servico" required>
+                  <option value="">Selecione</option>
+                  <option value="Revisão completa">Revisão completa</option>
+                  <option value="Diagnóstico técnico">Diagnóstico técnico</option>
+                  <option value="Regulagem de motor">Regulagem de motor</option>
+                  <option value="Restauração mecânica">Restauração mecânica</option>
+                  <option value="Preparação de motor">Preparação de motor</option>
+                  <option value="Consultoria pré-compra">Consultoria pré-compra</option>
+                  <option value="Outro">Outro</option>
+                </select>
+                <span class="form-error" id="error-servico"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="mensagem">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" rows="4" required placeholder="Descreva seu veículo e o que precisa..."></textarea>
+              <span class="form-error" id="error-mensagem"></span>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full">Enviar mensagem</button>
+            <p class="form-success" id="formSuccess" hidden>Mensagem preparada! Redirecionando para o WhatsApp...</p>
+          </form>
+
+          <aside class="contact-info reveal reveal--delay">
+            <a href="https://wa.me/5511958872337?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20Split%20Motorsport." class="whatsapp-banner" target="_blank" rel="noopener noreferrer">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.881 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              <div>
+                <strong>WhatsApp direto</strong>
+                <span>Diego — (11) 95887-2337</span>
+              </div>
+            </a>
+
+            <div class="info-card">
+              <h3>Endereço</h3>
+              <p>Região do ABC Paulista — São Paulo, SP<br><em>Endereço completo sob consulta via WhatsApp</em></p>
+            </div>
+
+            <div class="info-card">
+              <h3>Horário de funcionamento</h3>
+              <p>Segunda a sexta: 8h às 18h<br>Sábado: 8h às 13h<br>Domingo: fechado</p>
+            </div>
+
+            <div class="info-card">
+              <h3>Redes sociais</h3>
+              <div class="info-card__social">
+                <a href="https://www.instagram.com/split_motorsport/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Split Motorsport">Instagram</a>
+                <a href="https://youtube.com/@diegofusca78" target="_blank" rel="noopener noreferrer" aria-label="YouTube Diego Fusca">YouTube</a>
+              </div>
+            </div>
+
+            <div class="map-embed">
+              <iframe
+                title="Mapa — Região ABC Paulista"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d467690.14386865496!2d-46.924955!3d-23.682063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce448da0eb908d%3A0x4b0b0b0b0b0b0b0b!2sABC%2C%20SP!3m2!1d-23.682063!2d-46.924955!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr"
+                width="100%"
+                height="220"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#inicio" class="logo logo--footer">
+          <img
+            src="images/logo-split.png"
+            alt="Split Motorsport — Oficina especializada em motores VW aircooled"
+            class="logo__img logo__img--footer"
+            width="160"
+            height="160"
+          >
+        </a>
+        <p class="footer__tagline">Especialistas em Volkswagen air-cooled</p>
+      </div>
+      <nav class="footer__nav" aria-label="Links rápidos">
+        <h4>Links rápidos</h4>
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#especialidades">Especialidades</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+      <div class="footer__social">
+        <h4>Redes sociais</h4>
+        <div class="footer__social-links">
+          <a href="https://www.instagram.com/split_motorsport/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">IG</a>
+          <a href="https://youtube.com/@diegofusca78" target="_blank" rel="noopener noreferrer" aria-label="YouTube">YT</a>
+          <a href="https://wa.me/5511958872337" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">WA</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p>&copy; 2026 Split Motorsport. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botão flutuante WhatsApp -->
+  <a href="https://wa.me/5511958872337?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20Split%20Motorsport." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.881 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="js/testimonials.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
