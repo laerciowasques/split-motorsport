@@ -1,141 +1,110 @@
 /**
- * Depoimentos — carregamento do destaque Instagram
- * https://www.instagram.com/stories/highlights/17962501514442570/
+ * Depoimentos — avaliações Google (Split Motorsport)
+ * https://share.google/lH3b8jPVgYifp3KuI
  */
 (function () {
   'use strict';
 
-  var HIGHLIGHT_URL = 'https://www.instagram.com/stories/highlights/17962501514442570/';
-  var USERNAME = 'split_motorsport';
-
+  var DEFAULT_SOURCE = 'https://share.google/lH3b8jPVgYifp3KuI';
   var grid = document.getElementById('depoimentosGrid');
   var status = document.getElementById('depoimentosStatus');
+  var summaryRating = document.getElementById('depoimentosRating');
+  var summaryCount = document.getElementById('depoimentosCount');
+  var sourceLink = document.getElementById('depoimentosGoogleLink');
 
   if (!grid || !status) return;
+
+  function stars(count) {
+    var value = Math.max(0, Math.min(5, count || 5));
+    return '★★★★★'.slice(0, value) + '☆☆☆☆☆'.slice(0, 5 - value);
+  }
 
   function setStatus(message) {
     status.textContent = message;
   }
 
-  function extractMediaCodes(html) {
-    var codes = [];
-    var seen = {};
-
-    var patterns = [
-      /instagram\.com\/reel\/([A-Za-z0-9_-]+)/g,
-      /instagram\.com\/p\/([A-Za-z0-9_-]+)/g,
-      /"code":"([A-Za-z0-9_-]{11})"/g,
-      /"shortcode":"([A-Za-z0-9_-]{11})"/g
-    ];
-
-    patterns.forEach(function (pattern) {
-      var match;
-      while ((match = pattern.exec(html)) !== null) {
-        var code = match[1];
-        if (!seen[code]) {
-          seen[code] = true;
-          codes.push(code);
-        }
-      }
-    });
-
-    return codes;
+  function renderStarsHtml(count) {
+    return '<span class="google-review-card__stars" aria-label="' + count + ' estrelas">' + stars(count) + '</span>';
   }
 
-  function extractGraphqlCodes(html) {
-    var codes = [];
-    var marker = 'xdt_api__v1__feed__reels_media__connection';
-    if (html.indexOf(marker) === -1) return codes;
-
-    var edgeMatches = html.match(/"code":"([A-Za-z0-9_-]{11})"/g) || [];
-    edgeMatches.forEach(function (item) {
-      var code = item.replace(/"code":"(.+)"/, '$1');
-      if (codes.indexOf(code) === -1) codes.push(code);
-    });
-
-    return codes;
-  }
-
-  function createEmbedCard(code, type) {
+  function createReviewCard(review) {
     var card = document.createElement('article');
-    card.className = 'depoimentos-embed reveal visible';
+    card.className = 'google-review-card reveal visible';
 
-    var path = type === 'reel' ? 'reel' : 'p';
-    var embedUrl = 'https://www.instagram.com/' + path + '/' + code + '/embed/captioned/';
+    var initial = (review.author || 'C').trim().charAt(0).toUpperCase();
+    var author = review.author || 'Cliente Google';
+    var text = review.text || '';
 
     card.innerHTML =
-      '<iframe ' +
-      'src="' + embedUrl + '" ' +
-      'title="Depoimento Split Motorsport no Instagram" ' +
-      'class="depoimentos-embed__iframe" ' +
-      'loading="lazy" ' +
-      'allow="autoplay; encrypted-media; picture-in-picture" ' +
-      'allowfullscreen ' +
-      'referrerpolicy="no-referrer-when-downgrade">' +
-      '</iframe>';
+      '<header class="google-review-card__header">' +
+      '<span class="google-review-card__avatar" aria-hidden="true">' + initial + '</span>' +
+      '<div>' +
+      '<strong class="google-review-card__author">' + author + '</strong>' +
+      renderStarsHtml(review.rating || 5) +
+      '</div>' +
+      '<span class="google-review-card__brand" aria-label="Avaliação no Google">G</span>' +
+      '</header>' +
+      '<blockquote class="google-review-card__quote">' + text + '</blockquote>';
 
     return card;
   }
 
-  function renderEmbeds(codes) {
-    grid.innerHTML = '';
-    var limit = Math.min(codes.length, 6);
-
-    for (var i = 0; i < limit; i++) {
-      grid.appendChild(createEmbedCard(codes[i], 'p'));
-    }
-
-    setStatus(
-      limit > 0
-        ? limit + ' depoimento(s) carregado(s) do destaque Depoimentos ⚙️.'
-        : 'Nenhum depoimento disponível para exibir no momento.'
-    );
-  }
-
-  function renderProfileFallback() {
-    grid.innerHTML =
-      '<article class="depoimentos-embed depoimentos-embed--profile reveal visible">' +
+  function renderEmbed(data) {
+    var embedUrl = data.mapsEmbedUrl || 'https://www.google.com/maps?q=Split+Motorsport&output=embed&hl=pt-BR';
+    var article = document.createElement('article');
+    article.className = 'depoimentos-google__embed reveal visible';
+    article.innerHTML =
       '<iframe ' +
-      'src="https://www.instagram.com/' + USERNAME + '/embed" ' +
-      'title="Perfil Split Motorsport no Instagram" ' +
-      'class="depoimentos-embed__iframe depoimentos-embed__iframe--profile" ' +
+      'src="' + embedUrl + '" ' +
+      'title="Split Motorsport no Google Maps" ' +
+      'class="depoimentos-google__iframe" ' +
       'loading="lazy" ' +
-      'allow="autoplay; encrypted-media; picture-in-picture" ' +
       'allowfullscreen ' +
       'referrerpolicy="no-referrer-when-downgrade">' +
-      '</iframe>' +
-      '</article>';
-
-    setStatus(
-      'Toque em Depoimentos ⚙️ para ver todos os relatos de clientes no Instagram. ' +
-      'Abaixo, conteúdo recente de @' + USERNAME + '.'
-    );
+      '</iframe>';
+    grid.appendChild(article);
   }
 
-  function loadHighlightEmbeds() {
-    setStatus('Carregando depoimentos do Instagram…');
+  function renderData(data) {
+    var sourceUrl = data.sourceUrl || DEFAULT_SOURCE;
 
-    fetch('https://api.allorigins.win/raw?url=' + encodeURIComponent(HIGHLIGHT_URL))
-      .then(function (response) {
-        if (!response.ok) throw new Error('fetch failed');
-        return response.text();
-      })
-      .then(function (html) {
-        var codes = extractGraphqlCodes(html).concat(extractMediaCodes(html));
-        codes = codes.filter(function (code, index) {
-          return codes.indexOf(code) === index;
-        });
+    if (sourceLink) sourceLink.href = sourceUrl;
 
-        if (codes.length > 0) {
-          renderEmbeds(codes);
-        } else {
-          renderProfileFallback();
-        }
-      })
-      .catch(function () {
-        renderProfileFallback();
+    if (summaryRating) {
+      summaryRating.textContent = (data.rating || 5).toFixed(1).replace('.', ',');
+    }
+
+    if (summaryCount) {
+      summaryCount.textContent = data.reviewCount
+        ? data.reviewCount + ' avaliações no Google'
+        : 'Avaliações verificadas no Google';
+    }
+
+    grid.innerHTML = '';
+
+    if (data.reviews && data.reviews.length) {
+      data.reviews.forEach(function (review) {
+        grid.appendChild(createReviewCard(review));
       });
+      setStatus('Depoimentos reais publicados no Google pela Split Motorsport.');
+    } else {
+      renderEmbed(data);
+      setStatus('Veja as avaliações completas no Google ou explore a oficina no mapa abaixo.');
+    }
   }
 
-  loadHighlightEmbeds();
+  fetch('data/google-reviews.json')
+    .then(function (response) {
+      if (!response.ok) throw new Error('json failed');
+      return response.json();
+    })
+    .then(renderData)
+    .catch(function () {
+      renderData({
+        sourceUrl: DEFAULT_SOURCE,
+        rating: 5,
+        reviewCount: 0,
+        reviews: []
+      });
+    });
 })();

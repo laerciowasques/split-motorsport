@@ -809,13 +809,13 @@ textarea {
   color: var(--color-text-dim);
 }
 
-/* --- Depoimentos (Instagram) --- */
-.depoimentos-instagram {
+/* --- Depoimentos (Google) --- */
+.depoimentos-google {
   max-width: 960px;
   margin: 0 auto;
 }
 
-.depoimentos-instagram__toolbar {
+.depoimentos-google__toolbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -828,128 +828,167 @@ textarea {
   border-radius: var(--radius-lg);
 }
 
-.depoimentos-highlight {
+.depoimentos-google__brand {
   display: flex;
   align-items: center;
   gap: 16px;
   transition: var(--transition);
 }
 
-.depoimentos-highlight:hover {
+.depoimentos-google__brand:hover {
   transform: translateY(-2px);
 }
 
-.depoimentos-highlight:hover .depoimentos-highlight__ring {
-  box-shadow: 0 0 0 3px rgba(255, 209, 0, 0.25);
-}
-
-.depoimentos-highlight__ring {
+.depoimentos-google__icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 84px;
-  height: 84px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
-  padding: 3px;
-  background: linear-gradient(135deg, #ffd100, #ff6b00, #e1306c, #833ab4);
+  background: #fff;
+  color: #4285f4;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 800;
   flex-shrink: 0;
-  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
 }
 
-.depoimentos-highlight__avatar {
-  width: 72px;
-  height: 72px;
-  border-radius: 50%;
-  object-fit: cover;
-  background: #000;
-  border: 3px solid var(--color-bg-card);
-}
-
-.depoimentos-highlight__info strong {
+.depoimentos-google__info strong {
   display: block;
   font-family: var(--font-display);
   font-size: 1.125rem;
   margin-bottom: 4px;
 }
 
-.depoimentos-highlight__info span {
+.depoimentos-google__rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-size: 0.875rem;
   color: var(--color-text-muted);
 }
 
-.depoimentos-instagram__status {
+.depoimentos-google__rating span[aria-hidden="true"] {
+  color: #fbbc04;
+}
+
+.depoimentos-google__status {
   text-align: center;
   font-size: 0.875rem;
   color: var(--color-text-dim);
   margin-bottom: 24px;
 }
 
-.depoimentos-instagram__grid {
+.depoimentos-google__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 24px;
 }
 
-.depoimentos-embed {
-  background: var(--color-bg-card);
-  border: 1px solid var(--color-border);
+.depoimentos-google__embed {
+  grid-column: 1 / -1;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  min-height: 520px;
-  transition: var(--transition);
+  border: 1px solid var(--color-border);
+  min-height: 420px;
 }
 
-.depoimentos-embed:hover {
-  border-color: var(--color-border-accent);
-  box-shadow: var(--shadow-md);
-}
-
-.depoimentos-embed--profile {
-  grid-column: 1 / -1;
-  max-width: 540px;
-  margin: 0 auto;
-  width: 100%;
-}
-
-.depoimentos-embed__iframe {
+.depoimentos-google__iframe {
   display: block;
   width: 100%;
-  min-height: 520px;
+  min-height: 420px;
   border: 0;
   background: #000;
 }
 
-.depoimentos-embed__iframe--profile {
-  min-height: 480px;
+.google-review-card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  transition: var(--transition);
 }
 
-.section__desc a {
-  color: var(--color-accent);
-  text-decoration: underline;
-  text-underline-offset: 3px;
+.google-review-card:hover {
+  border-color: var(--color-border-accent);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
 }
 
-.section__desc a:hover {
-  color: var(--color-text);
+.google-review-card__header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.google-review-card__avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #4285f4;
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.google-review-card__author {
+  display: block;
+  font-size: 0.9375rem;
+  margin-bottom: 4px;
+}
+
+.google-review-card__stars {
+  color: #fbbc04;
+  font-size: 0.9375rem;
+  letter-spacing: 1px;
+}
+
+.google-review-card__brand {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #fff;
+  color: #4285f4;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.875rem;
+}
+
+.google-review-card__quote {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  font-style: italic;
 }
 
 @media (max-width: 768px) {
-  .depoimentos-instagram__toolbar {
+  .depoimentos-google__toolbar {
     flex-direction: column;
     align-items: stretch;
   }
 
-  .depoimentos-highlight {
+  .depoimentos-google__brand {
     justify-content: center;
     text-align: center;
   }
 
-  .depoimentos-instagram__toolbar .btn {
+  .depoimentos-google__toolbar .btn {
     width: 100%;
     justify-content: center;
   }
 
-  .depoimentos-instagram__grid {
+  .depoimentos-google__grid {
     grid-template-columns: 1fr;
   }
 }
